@@ -15,8 +15,7 @@ About the site
 This site is my effort in making a "subreddit" forum. Made this site with focus on sharing information and helping players in need.
 Here user can create forum posts, answer that post and comment on either the forum post or another post inside that "thread".
 
-About me
-=========================
+###About me
 [FIGURE src="image/martinledel.jpg?w=300&h=400&crop-to-fit&sharpen" class="right" caption="Bild på mig."]
 
 Heter Martin och läser andra året på BTHs campus i Karlsrona, Webbprogrammering. Nu efter halva utbildning kan jag nu säga att man har lärt sig en hel del saker. Framför allt roliga saker.
