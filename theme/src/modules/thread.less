@@ -1,0 +1,28 @@
+/** --------------------------------------------------------------
+ * General column elements.
+ */
+
+.thread-col {
+    #desinax-vgrid.column(@columns);
+    display: block;
+    padding: 0.5em;
+    outline: 0.1em solid black;
+}
+
+.thread-post {
+    #desinax-vgrid.column(12);
+    #desinax-vgrid.push(4);
+    display: block;
+    padding: 0.5em;
+    outline: 0.1em solid black;
+    margin-top: 1em;
+}
+
+.thread-comment {
+    #desinax-vgrid.column(12);
+    #desinax-vgrid.push(6);
+    display: block;
+    padding: 0.5em;
+    outline: 0.1em solid black;
+    margin-top: 1em;
+}

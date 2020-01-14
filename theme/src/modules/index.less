@@ -1,0 +1,22 @@
+/** --------------------------------------------------------------
+ * General column elements.
+ */
+
+.index-col {
+    #desinax-vgrid.column(@columns);
+}
+
+.index-col1 {
+    #desinax-vgrid.column(@columns - 14);
+
+    &.has-user {
+        #desinax-vgrid.column(@columns - 14);
+        #desinax-vgrid.push(4);
+    }
+}
+
+.index-flex {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+}
