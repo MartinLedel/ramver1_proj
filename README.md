@@ -13,7 +13,7 @@ Ramverk1 examination project
 Clone repo
 ------------------------------------
 
-git clone git@github.com:MartinLedel/ramverk1_proj.git
+`git clone git@github.com:MartinLedel/ramverk1_proj.git`
 
 Install necessary packages with composer
 ------------------------------------

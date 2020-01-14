@@ -27,7 +27,7 @@ if (! $session->has('user') || is_null($session->get('user'))) {
             ],
             [
                 "text" => "Tags",
-                "url" => "tag",
+                "url" => "tags",
                 "title" => "Forum tags.",
             ],
             [

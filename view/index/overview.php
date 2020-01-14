@@ -50,7 +50,7 @@ $model = new UserHandlerModel;
 </div>
 
 <div class="col columns">
-<h1>Popular threads</h1>
+<h1>Newly created threads</h1>
 <i class="fas fa-check" style="color:green"></i> = answered.
 <table>
     <tr>

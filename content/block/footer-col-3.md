@@ -1,5 +1,3 @@
 #### About WGTOTW (We Gonna Take Over The World)
 
-testetst
-
-[Read more](about)
+We are a massive, rich and evil corporation. You can read more [here](about) about the creator of this site.
