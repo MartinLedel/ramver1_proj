@@ -17,11 +17,15 @@ $model = new UserHandlerModel;
         <th>Avatar</th>
         <th>Username</th>
         <th>Email</th>
+        <th>Rank</th>
+        <th>Points</th>
     </tr>
     <tr>
         <td><img src="<?= $model->getGravatar($user->email) ?>"></td>
         <td><?= $user->acronym ?></td>
         <td><?= $user->email ?></td>
+        <td><?= $user->rank ?></td>
+        <td style="text-align:center"><?= $user->points ?></td>
     </tr>
 </table>
 <i class="fas fa-check" style="color:green"></i> = answered.
@@ -33,9 +37,9 @@ $model = new UserHandlerModel;
     <?php foreach ($forumPosts as $forum) : ?>
     <tr>
         <?php if ($forum->answered == "Yes") : ?>
-            <td><a href="thread/show-post/<?= $forum->id ?>"><?= $forum->topic ?></a> <i class="fas fa-check" style="color:green"></i></td>
+            <td><a href="../../thread/show-post/<?= $forum->id ?>"><?= $forum->topic ?></a> <i class="fas fa-check" style="color:green"></i></td>
         <?php else : ?>
-            <td><a href="thread/show-post/<?= $forum->id ?>"><?= $forum->topic ?></a> <i class="fas fa-check"></i></td>
+            <td><a href="../../thread/show-post/<?= $forum->id ?>"><?= $forum->topic ?></a> <i class="fas fa-check"></i></td>
         <?php endif; ?>
         <td><?= $forum->tags ?></td>
     </tr>

@@ -4,6 +4,7 @@ namespace Anax\Forum\HTMLForm;
 
 use Anax\HTMLForm\FormModel;
 use Psr\Container\ContainerInterface;
+use Anax\User\User;
 use Anax\Forum\Forum;
 use Anax\Forum\ForumHandlerModel;
 use Anax\Tags\Tags;
@@ -121,6 +122,12 @@ class CreateThreadForm extends FormModel
             $pwt->id_tags = $tagId;
             $pwt->save();
         }
+
+        $user = new User();
+        $user->setDb($this->di->get("dbqb"));
+        $user->find("id", $this->form->value("id-user"));
+        $user->points = $user->points + 1;
+        $user->save();
 
         return true;
     }

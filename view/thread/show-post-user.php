@@ -28,9 +28,9 @@ $urlToCreate = url("forum");
 Tags: <?= $openingPost["0"]->tags ?>
 </div>
 <?php foreach ($openingPost["0"]->comments as $comment) : ?>
-    <div class="thread-post columns">
+    <div class="thread-comment columns">
     <p>
-        Poster: <a href="../../user/common/<?= $comment->id_user ?>"><?= $comment->acronym ?></a> Created: <?= $comment->created ?>
+        Commenter: <a href="../../user/common/<?= $comment->id_user ?>"><?= $comment->acronym ?></a> Created: <?= $comment->created ?>
     </p>
     <p>
         <?= $comment->content ?>

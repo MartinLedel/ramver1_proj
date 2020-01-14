@@ -82,6 +82,22 @@ class UserHandlerModel
         return $res;
     }
 
+    public function calculateRank($user)
+    {
+        $points = $user->points;
+        if ($points == 20) {
+            $user->rank = "Low rank";
+        } elseif($points == 40) {
+            $user->rank = "High rank";
+        } elseif($points == 60) {
+            $user->rank = "Master rank";
+        } else {
+            $user->rank = "New user";
+        }
+
+        return $user;
+    }
+
     public function checkUser($route)
     {
         $session = $this->di->get("session");

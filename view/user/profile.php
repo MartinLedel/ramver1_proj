@@ -10,7 +10,7 @@ use Anax\User\UserHandlerModel;
 
 $model = new UserHandlerModel;
 
-$id = $user["id"];
+$id = $user->id;
 $urlToCreate = url("user/update-user/$id");
 
 ?><h1>Your profile</h1>
@@ -20,11 +20,15 @@ $urlToCreate = url("user/update-user/$id");
         <th>Avatar</th>
         <th>Username</th>
         <th>Email</th>
+        <th>Rank</th>
+        <th>Points</th>
     </tr>
     <tr>
-        <td><img src="<?= $model->getGravatar($user["email"]) ?>"></td>
-        <td><?= $user["acronym"] ?></td>
-        <td><?= $user["email"] ?></td>
+        <td><img src="<?= $model->getGravatar($user->rank) ?>"></td>
+        <td><?= $user->acronym ?></td>
+        <td><?= $user->email ?></td>
+        <td><?= $user->rank ?></td>
+        <td style="text-align:center"><?= $user->points ?></td>
         <td><a href="<?= $urlToCreate ?>">Update user</a></td>
     </tr>
 </table>

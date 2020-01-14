@@ -73,6 +73,7 @@ class CreateForm extends FormModel
         // Get values from the submitted form
         $user->acronym       = $this->form->value("user-name");
         $user->email         = $this->form->value("email");
+        $user->points        = "0";
         $password      = $this->form->value("password");
         $passwordAgain = $this->form->value("password-again");
 

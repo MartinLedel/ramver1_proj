@@ -5,6 +5,7 @@ namespace Anax\Comments\HTMLForm;
 use Anax\HTMLForm\FormModel;
 use Psr\Container\ContainerInterface;
 use Anax\Comments\Comments;
+use Anax\User\User;
 
 /**
  * Form to create an item.
@@ -71,8 +72,13 @@ class CreateCommentForm extends FormModel
         $comments->id_forum      = $this->form->value("id-thread");
         $comments->id_thread     = $this->form->value("id-post");
         $comments->content       = $this->form->value("content");
-
         $comments->save();
+
+        $user = new User();
+        $user->setDb($this->di->get("dbqb"));
+        $user->find("id", $this->form->value("id-user"));
+        $user->points = $user->points + 1;
+        $user->save();
 
         return true;
     }

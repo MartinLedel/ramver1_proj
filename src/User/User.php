@@ -26,6 +26,7 @@ class User extends ActiveRecordModel
      public $password;
      public $email;
      public $active;
+     public $points;
 
      /**
      * Set the password.

@@ -5,6 +5,7 @@ namespace Anax\Thread\HTMLForm;
 use Anax\HTMLForm\FormModel;
 use Psr\Container\ContainerInterface;
 use Anax\Thread\Thread;
+use Anax\User\User;
 
 /**
  * Form to create an item.
@@ -66,8 +67,13 @@ class CreatePostForm extends FormModel
         $thread->id_forum      = $this->form->value("id-post");
         $thread->content       = $this->form->value("content");
         $thread->answer        = "No";
-
         $thread->save();
+
+        $user = new User();
+        $user->setDb($this->di->get("dbqb"));
+        $user->find("id", $this->form->value("id-user"));
+        $user->points = $user->points + 1;
+        $user->save();
 
         return true;
     }

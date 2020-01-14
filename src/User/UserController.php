@@ -78,9 +78,11 @@ class UserController implements ContainerInjectableInterface
         $page = $this->di->get("page");
         $user = new User();
         $user->setDb($this->di->get("dbqb"));
+        $res = $user->find("id", $id);
+        $res = $this->model->calculateRank($res);
 
         $page->add("user/common-user", [
-            "user" => $user->find("id", $id),
+            "user" => $res,
             "forumPosts" => $this->model->forumPostsQuery($id),
         ]);
 
@@ -132,9 +134,14 @@ class UserController implements ContainerInjectableInterface
     {
         $this->model->checkUser("profile");
         $page = $this->di->get("page");
+        $id = $this->di->get("session")->get("user")["id"];
+        $user = new User();
+        $user->setDb($this->di->get("dbqb"));
+        $res = $user->find("id", $id);
+        $res = $this->model->calculateRank($res);
 
         $page->add("user/profile", [
-            "user" => $this->di->get("session")->get("user"),
+            "user" => $res,
         ]);
 
         return $page->render([
