@@ -1,7 +1,7 @@
 Ramverk1 examination project
 ==================================
 
-[![Build Status](https://travis-ci.org/MartinLedel/ramverk1_proj.svg?branch=master)](https://travis-ci.org/MartinLedel/ramverk1_proj)
+[![Build Status](https://travis-ci.org/MartinLedel/ramver1_proj.svg?branch=master)](https://travis-ci.org/MartinLedel/ramver1_proj)
 [![CircleCI](https://circleci.com/gh/MartinLedel/ramver1_proj.svg?style=svg)](https://circleci.com/gh/MartinLedel/ramver1_proj)
 
 [![Build Status](https://scrutinizer-ci.com/g/MartinLedel/ramver1_proj/badges/build.png?b=master)](https://scrutinizer-ci.com/g/MartinLedel/ramver1_proj/build-status/master)

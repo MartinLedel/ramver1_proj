@@ -7,7 +7,7 @@ return [
         [
             "info" => "Controller for comment managment.",
             "mount" => "comment",
-            "handler" => "\Anax\comments\commentsController",
+            "handler" => "\Anax\Comments\CommentsController",
         ],
     ]
 ];

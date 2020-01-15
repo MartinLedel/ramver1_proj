@@ -39,7 +39,7 @@ class CommentsController implements ContainerInjectableInterface
         $form = new CreateCommentForm($this->di);
         $form->check();
 
-        $page->add("thread/create-post", [
+        $page->add("comments/create-comment", [
             "threadId" => $threadId,
             "form" => $form->getHTML(),
         ]);
